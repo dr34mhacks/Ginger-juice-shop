@@ -17,7 +17,7 @@ Before setting up the application, make sure you have the following installed on
 
 - **Python 3.7 or later**: [Download Python](https://www.python.org/downloads/)
 - **Flask:** Usually comes by default in many newer debian distro if not just install it by using
-- 
+
 ```
 pip3 install flask
 ```
