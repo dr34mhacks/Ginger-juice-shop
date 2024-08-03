@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template_string
 
 app = Flask(__name__)
+app.secret_key = "VjJGeklHbDBJSEpsWVd4c2VTQnpkWEJ3YjNObFpDQjBieUJpWlNCelpXTnlaWFJwZG1VLw=="
 
 # Simple SSTI vulnerability at /greet path
 @app.route('/')
