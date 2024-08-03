@@ -22,7 +22,7 @@ pip3 install flask
 1. **Clone the repository**:
 
 ```bash
-git clone https://github.com/dr34mhacks/ginger-juice-shop.git 
+git clone https://github.com/dr34mhacks/Ginger-juice-shop.git
 ```
 
 2. **Navigate to the project directory**:
