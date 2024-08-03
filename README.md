@@ -57,6 +57,10 @@ The application provides two routes for exploring SSTI:
 - Explore techniques to bypass input filters and security mechanisms.
 - Learn to abuse various dangerous functions of python to chain RCE
 
+## Task
+- gain rce
+- get the flag.txt via RCE
+
 ## Security Disclaimer
 
 This application is intended for educational purposes only. Do not use these techniques on systems without explicit permission. Always practice ethical hacking and responsible disclosure.
