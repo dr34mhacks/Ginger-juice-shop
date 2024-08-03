@@ -147,7 +147,7 @@ def hard():
         name = request.form.get('name', '')
         
         # Basic input validation to block common SSTI patterns
-        blacklist = ['__', 'class', 'mro', 'subclasses', 'eval', 'exec', 'import', 'os', 'sys']
+        blacklist = ['__', 'class', 'mro', 'subclasses', 'eval', 'exec', 'import', 'os', 'sys', '.', 'base']
         if any(keyword in name for keyword in blacklist):
             return "Invalid input detected!", 400
 
