@@ -3,7 +3,12 @@
 
 Welcome to the Ginger Juice Shop, where you can explore and learn about Server-Side Template Injection (SSTI) vulnerabilities in a safe and controlled environment. This application provides two scenarios for practicing SSTI exploitation: a basic example and a more advanced challenge with input restrictions.
 
-![image](https://github.com/user-attachments/assets/d3ddc15b-5037-4a3c-8082-c6ef54241aa0)
+### Homepage UI
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/c54e3415-1d91-4316-a99c-349ebf72fe0d">
+
+### /hard endpoint UI
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/76b8cc39-4862-49e9-a266-446bf05429a4">
+
 
 
 ## Prerequisites 
@@ -34,7 +39,7 @@ cd ginger-juice-shop
  3. **Running the application:**
 
 ```
-python app.py
+flask run
 ```
 
 This will start a local server, and you can access the application by navigating to `http://127.0.0.1:5000` in your web browser.
@@ -50,6 +55,7 @@ The application provides two routes for exploring SSTI:
 - Understand how SSTI vulnerabilities occur in web applications.
 - Learn how to construct payloads to exploit SSTI in a safe environment.
 - Explore techniques to bypass input filters and security mechanisms.
+- Learn to abuse various dangerous functions of python to chain RCE
 
 ## Security Disclaimer
 
