@@ -71,10 +71,10 @@ Feel free to submit issues or pull requests for enhancements or bug fixes. Contr
 
 ## Blog 
 
-- [https://<url>](https://dr34mhacks.github.io/posts/how-to-exploit-ssti/)
+- [https://dr34mhacks.github.io/posts/how-to-exploit-ssti/](https://dr34mhacks.github.io/posts/how-to-exploit-ssti/)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License
 
-Happy pentesting! 🛡️🔍
+Happy Hunting! 🛡️🔍
