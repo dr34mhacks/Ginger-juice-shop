@@ -6,7 +6,7 @@ Welcome to the Ginger Juice Shop, where you can explore and learn about Server-S
 ### Homepage UI
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/c54e3415-1d91-4316-a99c-349ebf72fe0d">
 
-### /hard endpoint UI
+### /hard endpoint (A Must Try)
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/76b8cc39-4862-49e9-a266-446bf05429a4">
 
 
@@ -71,7 +71,7 @@ Feel free to submit issues or pull requests for enhancements or bug fixes. Contr
 
 ## Blog 
 
-- https://<url>
+- [https://<url>](https://dr34mhacks.github.io/posts/how-to-exploit-ssti/)
 
 ## License
 
