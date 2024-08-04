@@ -6,7 +6,6 @@ Welcome to the Ginger Juice Shop, where you can explore and learn about Server-S
 ### Homepage UI
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/e4caf1ae-d9d5-4089-a3c4-c522a6b83932">
 
-
 ### Hard Section
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/8135990a-1b2f-421e-972f-6dc6978b3e5f">
 
@@ -17,7 +16,7 @@ Before setting up the application, make sure you have the following installed on
 
 - **Python 3.7 or later**: [Download Python](https://www.python.org/downloads/)
 - **Flask:** Usually comes by default in many newer debian distro if not just install it by using
-- 
+
 ```
 pip3 install flask
 ```
@@ -73,10 +72,10 @@ Feel free to submit issues or pull requests for enhancements or bug fixes. Contr
 
 ## Blog 
 
-- https://<url>
+- [https://dr34mhacks.github.io/posts/how-to-exploit-ssti/](https://dr34mhacks.github.io/posts/how-to-exploit-ssti/)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License
 
-Happy pentesting! 🛡️🔍
+Happy Hunting! 🛡️🔍

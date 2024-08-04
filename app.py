@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template_string
 
 app = Flask(__name__)
+app.secret_key = "VjJGeklHbDBJSEpsWVd4c2VTQnpkWEJ3YjNObFpDQjBieUJpWlNCelpXTnlaWFJwZG1VLw=="
 
 # Simple SSTI vulnerability at /greet path
 @app.route('/')
@@ -168,7 +169,7 @@ def hard():
         # Basic input validation to block common SSTI patterns
         blacklist = ['__', 'class', 'mro', 'subclasses', 'eval', 'exec', 'import', 'os', 'sys', '.', '_', 'config']
         if any(keyword in name for keyword in blacklist):
-            return "Invalid input detected!", 400
+            return "Invalid input detected! You might need to Try Hard!!", 400
 
         template = '''
             <!DOCTYPE html>
