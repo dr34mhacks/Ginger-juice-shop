@@ -35,7 +35,7 @@ def index():
                     text-align: center;
                 }
                 h1 {
-                    color: #d35400;
+                    color: #3498db;
                     font-size: 2em;
                     margin-bottom: 20px;
                 }
@@ -47,8 +47,8 @@ def index():
                     border-radius: 5px;
                     font-size: 1em;
                 }
-                input[type="submit"] {
-                    background-color: #d35400;
+                input[type="submit"], .btn-hard {
+                    background-color: #3498db;
                     color: white;
                     border: none;
                     padding: 12px 25px;
@@ -56,10 +56,30 @@ def index():
                     cursor: pointer;
                     font-size: 1em;
                     transition: background-color 0.3s, transform 0.3s;
+                    display: block;
+                    margin: 10px auto;
+                    width: 80%;
+                    position: relative;
+                    overflow: hidden;
+                    z-index: 0;
                 }
-                input[type="submit"]:hover {
-                    background-color: #e67e22;
+                input[type="submit"]:hover, .btn-hard:hover {
+                    background-color: #2980b9;
                     transform: scale(1.05);
+                }
+                input[type="submit"]::before, .btn-hard::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 200%;
+                    height: 100%;
+                    background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.5), rgba(255,255,255,0.1));
+                    transition: left 0.5s ease-in-out;
+                    z-index: -1;
+                }
+                input[type="submit"]:hover::before, .btn-hard:hover::before {
+                    left: 100%;
                 }
                 .greeting-container {
                     margin-top: 20px;
@@ -73,13 +93,13 @@ def index():
                     <input type="text" name="name" placeholder="Enter your name" required>
                     <input type="submit" value="Greet">
                 </form>
+                <button class="btn-hard" onclick="window.location.href='/hard'">Go to Hard Challenge</button>
             </div>
             <div class="greeting-container" id="greeting-container" style="display: none;">
             </div>
         </body>
         </html>
     '''
-# simple exploitation here at
 
 @app.route('/greet', methods=['POST'])
 def greet():
@@ -114,19 +134,19 @@ def greet():
                     text-align: center;
                 }
                 h2 {
-                    color: #d35400;
+                    color: #3498db;
                     font-size: 2em;
                 }
                 a {
                     text-decoration: none;
-                    color: #d35400;
+                    color: #3498db;
                     font-weight: bold;
                     display: inline-block;
                     margin-top: 20px;
                     font-size: 1.2em;
                 }
                 a:hover {
-                    color: #e67e22;
+                    color: #2980b9;
                 }
             </style>
         </head>
@@ -138,7 +158,6 @@ def greet():
         </body>
         </html>
     '''
-    # This is the vulnerable point for SSTI - Take notes guys
     return render_template_string(template)
 
 # More complex SSTI challenge at /hard
@@ -148,9 +167,9 @@ def hard():
         name = request.form.get('name', '')
         
         # Basic input validation to block common SSTI patterns
-        blacklist = ['__', 'class', 'mro', 'subclasses', 'eval', 'exec', 'import', 'os', 'sys', '.', 'base']
+        blacklist = ['__', 'class', 'mro', 'subclasses', 'eval', 'exec', 'import', 'os', 'sys', '.', '_', 'config']
         if any(keyword in name for keyword in blacklist):
-            return "Invalid input detected!", 400
+            return "Invalid input detected! You might need to Try Hard!!", 400
 
         template = '''
             <!DOCTYPE html>
@@ -182,19 +201,19 @@ def hard():
                         text-align: center;
                     }
                     h2 {
-                        color: #d35400;
+                        color: #3498db;
                         font-size: 2em;
                     }
                     a {
                         text-decoration: none;
-                        color: #d35400;
+                        color: #3498db;
                         font-weight: bold;
                         display: inline-block;
                         margin-top: 20px;
                         font-size: 1.2em;
                     }
                     a:hover {
-                        color: #e67e22;
+                        color: #2980b9;
                     }
                 </style>
             </head>
@@ -230,14 +249,14 @@ def hard():
                     background-position: center;
                 }
                 .container {
-                    background-color: #ffffff;
+                    background-color: rgba(255, 255, 255, 0.9);
                     padding: 40px;
                     border-radius: 15px;
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                     text-align: center;
                 }
                 h1 {
-                    color: #d35400;
+                    color: #3498db;
                     font-size: 2em;
                     margin-bottom: 20px;
                 }
@@ -250,7 +269,7 @@ def hard():
                     font-size: 1em;
                 }
                 input[type="submit"] {
-                    background-color: #d35400;
+                    background-color: #3498db;
                     color: white;
                     border: none;
                     padding: 12px 25px;
@@ -258,10 +277,30 @@ def hard():
                     cursor: pointer;
                     font-size: 1em;
                     transition: background-color 0.3s, transform 0.3s;
+                    display: block;
+                    margin: 10px auto;
+                    width: 80%;
+                    position: relative;
+                    overflow: hidden;
+                    z-index: 0;
                 }
                 input[type="submit"]:hover {
-                    background-color: #e67e22;
+                    background-color: #2980b9;
                     transform: scale(1.05);
+                }
+                input[type="submit"]::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 200%;
+                    height: 100%;
+                    background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.5), rgba(255,255,255,0.1));
+                    transition: left 0.5s ease-in-out;
+                    z-index: -1;
+                }
+                input[type="submit"]:hover::before {
+                    left: 100%;
                 }
                 .greeting-container {
                     margin-top: 20px;
@@ -281,21 +320,6 @@ def hard():
         </body>
         </html>
     '''
-
-# # Helper route to show subclasses
-# @app.route('/subclasses')
-# def subclasses():
-#     try:
-#         # List all subclasses of the base object
-#         subclasses = ''.__class__.__mro__[1].__subclasses__()
-#         # Display the subclasses with their indices
-#         result = "<h2>List of Subclasses</h2><ul>"
-#         for i, subclass in enumerate(subclasses):
-#             result += f"<li>{i}: {subclass}</li>"
-#         result += "</ul>"
-#         return result
-#     except Exception as e:
-#         return str(e)
 
 if __name__ == '__main__':
     app.run(debug=True)
