@@ -1,7 +1,9 @@
 
 ## Ginger Juice Shop - Vulnerable SSTI Lab
 
-Welcome to the Ginger Juice Shop, where you can explore and learn about Server-Side Template Injection (SSTI) vulnerabilities in a safe and controlled environment. This application provides two scenarios for practicing SSTI exploitation: a basic example and a more advanced challenge with input restrictions.
+Welcome to the Ginger Juice Shop, where you can explore and learn about Server-Side Template Injection (SSTI) vulnerabilities in a safe and controlled environment. This application provides two scenarios for practicing SSTI exploitation: a basic example and a more advanced challenge with input restrictions. I hosted this live as well in case if you are sloth bear like me, Use the live link here at:
+
+[Live Lab](https://ssti.pythonanywhere.com/)
 
 ### Homepage UI
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/e4caf1ae-d9d5-4089-a3c4-c522a6b83932">
