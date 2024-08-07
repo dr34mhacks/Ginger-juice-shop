@@ -12,7 +12,10 @@ Welcome to the Ginger Juice Shop, where you can explore and learn about Server-S
 
 ### Hard Section
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/8135990a-1b2f-421e-972f-6dc6978b3e5f">
-
+#### Keywords Blacklisted in /hard
+```
+['__', 'class', 'mro', 'subclasses', 'eval', 'exec', 'import', 'os', 'sys', '.', '_', 'config']
+```
 
 ## Prerequisites 
 
