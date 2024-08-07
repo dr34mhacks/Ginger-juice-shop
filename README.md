@@ -67,6 +67,8 @@ The application provides two routes for exploring SSTI:
 
 <img width="1635" alt="image" src="https://github.com/user-attachments/assets/9b33eb97-8714-4552-aef4-248aed1c6573">
 
+`Solver.py`
+
 ```py
 from rich.console import Console
 from rich.prompt import Prompt
